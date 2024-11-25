@@ -15,8 +15,11 @@ conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
 try:
+    #TODO: Llamar al query
     cursor.execute("SELECT TOP (1000) [id_usuario],[emp],[password],[estado] FROM [Sistemas_Farz].[dbo].[Usuarios]")
+    #TODO: Obtener Resultados
     rows = cursor.fetchall()
+    #TODO: mostrar los resultados en consola
     for row  in rows:
         print(row)
 except Exception as e:
